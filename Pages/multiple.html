@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Buttons</title>
+    <style>
+        h1 {
+            color: darkblue;
+            border: 2px solid darkblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiple Buttons</h1>
+    <button class="btn-onclick">Button Alpha</button>
+    <br>
+    <br>
+    <button class="btn-onclick">Button Beta</button>
+    <br>
+    <br>
+    <button class="btn-onclick">Button Gamma</button>
+    <br>
+    <br>
+    <button><a href="index.html">Back to Home</a></button>
+    <br>
+    <br>
+    <button><a href="dom.html">Go to Dom Page</a></button>
+    <script>
+        let btn = document.querySelectorAll('.btn-onclick');
+
+        function Color() {
+            let letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        btn.forEach(btn => {
+            btn.onclick = () => {
+                document.body.style.backgroundColor = Color();
+            }
+        });
+    </script>
+</body>
+</html>

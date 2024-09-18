@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events Exercise</title>
+</head>
+<body>
+    <button id="btn-inline"> Click Me!</button>
+    <button><a href="/index.html">Back to Home!</a></button>
+    <script>
+        console.group('Exercise 2');
+        function changeBackground() {
+            document.body.style.backgroundColor = 'lightblue';
+        }
+
+        document.getElementById('btn-inline').onclick = changeBackground;
+    </script>
+</body>
+</html>
