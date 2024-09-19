@@ -22,6 +22,36 @@
     <a href="./dom.html">Dom Link</a> 
     <br>
     <a href="../Pages/multiple.html">Multiple DOM Link</a>
+    <br>
+    <br>
     <button id='click'>Click Me!</button>
+    <br>
+    <br>
+    <input type="text" id="textInput" placeholder="Text goes here"/>
+    <p id="textDisplay"></p>
+    <br>
+    <br>
+    <ul id="itemList"></ul>
+    <script>
+        let items = [
+           {name: 'Item 1'},
+           {name: 'Item 2'},
+           {name: 'Item 3'},
+           {name: 'Item 4'}
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+           let ul = document.getElementById('itemList');
+
+           items.forEach(item => {
+              let li = document.createElement('li');
+        
+              li.textContent = item.name;
+              ul.appendChild(li);
+              li.style.backgroundColor = "gray";
+           });
+        });
+
+    </script>
 </body>
 </html>
